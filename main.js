@@ -23,17 +23,87 @@ function zcervenej(elementSelector) {
 /**
  * Zvetsi vybrany objekt o jeden pixel
  *
-  * @param {obj} event
-
+ * @param {str} elementSelector
+ * @param {int} add_pix
  */
 function zvetsiPismo(elementSelector, add_pix) {
 
     let element = document.querySelector(elementSelector)
     let currentfontSize =  parseInt(element.style.fontSize);
-    console.log(elementSelector, currentfontSize);
+    /** console.log(elementSelector, currentfontSize); */
     newFontSize = (currentfontSize + add_pix) + 'px';
-    console.log(newFontSize);
+    /** console.log(newFontSize); */
     element.style.fontSize = newFontSize;
 
 }
 
+
+/**
+ * Pusti audio
+ *
+ * @param {str} elementSelector
+ */
+function hraj(elementSelector) {
+  let zvuk;
+  zvuk = document.querySelector(elementSelector);
+  zvuk.play();
+}
+
+
+/**
+ * Zastaví audio - pauza
+ *
+ * @param {str} elementSelector
+ */
+function pauza(elementSelector) {
+  let zvuk;
+  zvuk = document.querySelector(elementSelector);
+  zvuk.pause();
+}
+
+/**
+ * Ztlumí audio
+ *
+ * @param {str} elementSelector
+ */
+function ztlum(elementSelector) {
+  let zvuk;
+  zvuk = document.querySelector(elementSelector);
+  zvuk.volume = 0;
+}
+
+/**
+ * Ztliší audio na polovinu
+ *
+ * @param {str} elementSelector
+ */
+function ztis(elementSelector) {
+  let zvuk;
+  zvuk = document.querySelector(elementSelector);
+  zvuk.volume = 0.5;
+ }
+
+
+ /**
+  * Nahlas audio
+  *
+  * @param {str} elementSelector
+  */
+ function nahlas(elementSelector) {
+   let zvuk;
+   zvuk = document.querySelector(elementSelector);
+   zvuk.volume = 1;
+  }
+
+
+
+ /**
+  * Na zacatek audia
+  *
+  * @param {str} elementSelector
+  */
+ function na_zacatek(elementSelector) {
+   let zvuk;
+   zvuk = document.querySelector(elementSelector);
+   zvuk.currentTime = 0;
+  }

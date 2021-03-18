@@ -1,31 +1,43 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>JavaScript a DOM</title>
-	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Source+Sans+Pro:400,400i,700,700i&amp;subset=latin-ext" rel="stylesheet">
-	<link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JavaScript a DOM</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Source+Sans+Pro:400,400i,700,700i&amp;subset=latin-ext"
+          rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!--	<h1>Změna tříd, události</h1>
 
-	<div class="ctverecek zluty"></div>
+<p class="odstavec" style="font-size: 16px" onmouseover="priNajeti()" onmouseout="priOdjeti()">"V elipse spí lev."</p>
 
-	<div class="ctverecek zeleny"></div>
+<button onclick="zcervenej('.odstavec')">"červené po kliknutí"</button>
 
-	<img class="obrazek" src="obrazky/kocka.jpg">
+<button onclick="zvetsiPismo('.odstavec', 1)">větší po kliknutí</button>
 
-	<button class="tlacitko">Čudlajs</button>
 
-	<audio src="audio/dingdingdang.mp3" preload="auto"></audio> -->
+<br/>
+<br/>
 
-	<p class="odstavec" style="font-size: 16px" onmouseover="priNajeti()" onmouseout="priOdjeti()">"V elipse spí lev."</p>
 
-	<button onclick="zcervenej('.odstavec')">"červené po kliknutí"</button>
+<div>
+	<p>Audio přehrávač</p>
+	<audio id="zvuk" src="audio/dingdingdang.mp3" preload="auto"></audio>
 
-	<button onclick="zvetsiPismo('.odstavec', 1)">větší po kliknutí</button>
+	<button onclick="hraj('#zvuk')">hraj</button>
+
+	<button onclick="pauza('#zvuk')">pausa</button>
+
+    <button onclick="ztlum('#zvuk')">ztlum</button>
+
+    <button onclick="ztis('#zvuk')">zvuk na polovinu hlasitosti</button>
+
+    <button onclick="nahlas('#zvuk')">nahlas</button>
+
+    <button onclick="na_zacatek('#zvuk')">na začátek</button>
+</div>
 
 <script src="main.js"></script>
 </body>
